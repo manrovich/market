@@ -6,14 +6,14 @@
                             http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="2024-07-23--01-createTableUser" author="manrovich">
-        <createTable tableName="user">
+        <createTable tableName="users">
             <column name="id" type="SERIAL">
                 <constraints primaryKey="true"/>
             </column>
             <column name="username" type="VARCHAR(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="password" type="VARCHAR(50)">
+            <column name="password" type="CHAR(60)">
                 <constraints nullable="false"/>
             </column>
         </createTable>

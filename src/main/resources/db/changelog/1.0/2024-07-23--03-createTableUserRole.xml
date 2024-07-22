@@ -8,7 +8,7 @@
     <changeSet id="2024-07-23--03-createTableUserRole" author="manrovich">
         <createTable tableName="user_role">
             <column name="user_id" type="INT">
-                <constraints nullable="false" foreignKeyName="fk_user_role_user" referencedTableName="user" referencedColumnNames="id"/>
+                <constraints nullable="false" foreignKeyName="fk_user_role_user" referencedTableName="users" referencedColumnNames="id"/>
             </column>
             <column name="role_id" type="INT">
                 <constraints nullable="false" foreignKeyName="fk_user_role_role" referencedTableName="role" referencedColumnNames="id"/>

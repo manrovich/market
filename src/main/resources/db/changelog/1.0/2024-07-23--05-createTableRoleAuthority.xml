@@ -5,16 +5,16 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                             http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="2024-07-23--05-createTableUserRole" author="manrovich">
-        <createTable tableName="user_role">
+    <changeSet id="2024-07-23--05-createTableRoleAuthority" author="manrovich">
+        <createTable tableName="role_authority">
             <column name="role_id" type="INT">
-                <constraints nullable="false" foreignKeyName="fk_user_role_user" referencedTableName="role" referencedColumnNames="id"/>
+                <constraints nullable="false" foreignKeyName="fk_role_authority_role" referencedTableName="role" referencedColumnNames="id"/>
             </column>
             <column name="authority_id" type="INT">
-                <constraints nullable="false" foreignKeyName="fk_user_role_role" referencedTableName="authority" referencedColumnNames="id"/>
+                <constraints nullable="false" foreignKeyName="fk_role_authority_authority" referencedTableName="authority" referencedColumnNames="id"/>
             </column>
         </createTable>
-        <addPrimaryKey columnNames="user_id, role_id" constraintName="pk_user_role" tableName="user_role"/>
+        <addPrimaryKey columnNames="role_id, authority_id" constraintName="pk_role_authority" tableName="role_authority"/>
     </changeSet>
 
 </databaseChangeLog>
