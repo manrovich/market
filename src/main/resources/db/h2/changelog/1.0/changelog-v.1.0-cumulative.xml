@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <include file="2024-07-23--01-createTableUser.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--02-createTableRole.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--03-createTableUserRole.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--04-createTableAuthority.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--05-createTableRoleAuthority.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--06-createTableCategory.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--07-createTableProduct.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--08-createTableCart.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--09-createTableCartProduct.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

@@ -2,7 +2,7 @@ spring:
     application:
         name: market
     datasource:
-        url: jdbc:postgresql://localhost:5432/market
+        url: jdbc:postgresql://localhost:5434/market
         username: postgres
         password: postgres
         driver-class-name: org.postgresql.Driver
@@ -16,4 +16,6 @@ spring:
                 dialect: org.hibernate.dialect.PostgreSQLDialect
     liquibase:
         enabled: true
-        change-log: classpath:/db/changelog/db.changelog-master.xml
+        change-log: classpath:/db/postgres/changelog/db.changelog-master.xml
+    profiles:
+        active: dev

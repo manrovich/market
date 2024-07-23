@@ -1,24 +1,15 @@
 spring:
-    application:
-        name: market
+    config:
+        import: classpath:/application-dev-common.yml
+
     datasource:
-        url: jdbc:postgresql://localhost:5432/dev_market
+        url: jdbc:postgresql://localhost:5434/dev_market
         username: postgres
         password: postgres
         driver-class-name: org.postgresql.Driver
     jpa:
-        hibernate:
-        ddl-auto: none
-        show-sql: true
         properties:
             hibernate:
-                format_sql: true
                 dialect: org.hibernate.dialect.PostgreSQLDialect
     liquibase:
-        enabled: true
-        change-log: classpath:/db/changelog/db.changelog-master.xml
-logging:
-    level:
-        org.springframework.security: DEBUG
-        org.springframework.web: DEBUG
-        com.hn.market: DEBUG
+        change-log: classpath:/db/postgres/changelog/db.changelog-master.xml

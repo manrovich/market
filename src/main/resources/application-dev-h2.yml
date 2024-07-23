@@ -1,0 +1,15 @@
+spring:
+  config:
+    import: classpath:/application-dev-common.yml
+
+  datasource:
+    url: jdbc:h2:mem:dev_market
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  liquibase:
+    change-log: classpath:/db/h2/changelog/db.changelog-master.xml
