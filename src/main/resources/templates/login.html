@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Авторизация</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{/css/style.css}" /> <!-- Закрытие атрибута th:href -->
+    </head>
+    <body class="login-body">
+
+        <div class="login-container">
+            <img src="https://via.placeholder.com/200x100" alt="Логотип" class="login-logo">
+            <form class="login-form" th:action="@{/login}" method="post"> <!-- Перенос атрибутов action и method в форму -->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Введите логин"> <!-- Добавление атрибута name -->
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Введите пароль"> <!-- Добавление атрибута name -->
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Войти</button>
+            </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

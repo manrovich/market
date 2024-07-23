@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Корпоративный магазин</a>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="button">Корзина</button>
+</nav>
+
+<div class="sidebar">
+    <h4 class="text-center">Корпоративный магазин</h4>
+    <a href="#users">Выдача пользователям</a>
+    <div class="submenu">
+        <a href="#mice">Мыши</a>
+        <a href="#headsets">Гарнитуры</a>
+        <a href="#docking">Док-станции</a>
+    </div>
+    <a href="#tools">Инструменты IT</a>
+    <a href="#consumables">Расходники</a>
+    <div class="submenu">
+        <a href="#cables">Кабели</a>
+        <a href="#adapters">Переходники</a>
+    </div>
+</div>
+
+<div class="content">
+    <h1 th:text="${product.name}">Карточка товара</h1>
+    <div class="product-details">
+        <img th:src="@{${product.imageUrl}}" alt="Изображение товара" class="product-img">
+        <div class="buttons">
+            <a th:href="@{https://example.com}" class="btn btn-info mb-3" target="_blank">Перейти на страницу магазина</a>
+            <button class="btn btn-primary mb-3">Добавить в корзину</button>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <tbody>
+        <tr th:each="entry : ${specification}">
+            <th scope="row" th:text="${entry.key}">Ключ</th>
+            <td th:text="${entry.value}">Значение</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

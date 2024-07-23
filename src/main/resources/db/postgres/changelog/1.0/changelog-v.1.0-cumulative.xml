@@ -14,5 +14,7 @@
     <include file="2024-07-23--07-createTableProduct.xml" relativeToChangelogFile="true"/>
     <include file="2024-07-23--08-createTableCart.xml" relativeToChangelogFile="true"/>
     <include file="2024-07-23--09-createTableCartProduct.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--10-updateTableProduct.xml" relativeToChangelogFile="true"/>
+    <include file="2024-07-23--11-renameProductColumn.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

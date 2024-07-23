@@ -25,8 +25,8 @@ public class Product {
     @Column(name = "short_description")
     private String shortDescription;
 
-    @Column(name = "long_description", columnDefinition = "JSONB")
-    private String longDescription;
+    @Column(name = "specification")
+    private String specification;
 
     @Column(name = "image_path")
     private String imagePath;
@@ -62,12 +62,12 @@ public class Product {
         this.shortDescription = shortDescription;
     }
 
-    public String getLongDescription() {
-        return longDescription;
+    public String getSpecification() {
+        return specification;
     }
 
-    public void setLongDescription(String longDescription) {
-        this.longDescription = longDescription;
+    public void setSpecification(String specification) {
+        this.specification = specification;
     }
 
     public String getImagePath() {
